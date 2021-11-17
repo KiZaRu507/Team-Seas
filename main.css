@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Mali:wght@200&family=Open+Sans:wght@800&display=swap');
+*,*::before,*::after{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    margin:0;
+}
+.logo{
+    position: absolute;
+    left: 2%;
+    top:2%;
+    
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+    overflow: hidden;
+    /* This is done so that when the after element is added then we can hide the large size and match it with this container */
+    
+}
+
+.logo::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/logo.png');
+    background-size: cover;
+}
+.logo::after{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    bottom: 0;
+    left:-50%;
+    background-color: aqua;
+    border-radius: 35%;
+    animation:waves 5s ease-in-out alternate infinite;
+}
+@keyframes waves{
+    to{
+        transform: translateY(-50%)rotate(540deg);
+    }
+}
