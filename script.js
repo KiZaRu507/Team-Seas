@@ -8,3 +8,7 @@ async function setupTrash(){
     .then(data=>data.count)
     money.innerHTML=currencyFormatter.format(amountRaised*74.28)
 }
+function createTrash(){
+    const img=document.createElement('img');
+    
+}
